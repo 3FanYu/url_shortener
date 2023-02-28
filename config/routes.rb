@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :short_url, only: [:create], path: '/short_urls'
+  get "/:short_url", to: "main#redirect"
 end

@@ -9,5 +9,9 @@ module ShortUrlHelper
   def generate_short_url(key:)
     ::Base62.encode(key)
   end
-  
+
+  def decode_short_url(short_url:)
+    ::Base62.decode(short_url)
+  end
+
 end
