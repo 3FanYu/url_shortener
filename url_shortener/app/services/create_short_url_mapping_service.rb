@@ -21,7 +21,7 @@ class CreateShortUrlMappingService
   def create_mapping
     unique_key = generate_unique_key
     short_url = generate_short_url(key: unique_key)
-    @short_url_mapping = ::ShortUrlMapping.create(key: unique_key, short_url: short_url, original_url: @url)
+    @short_url_mapping = ::ShortUrlMapping.create!(key: unique_key, short_url: short_url, original_url: @url)
   end
 
   def render_result

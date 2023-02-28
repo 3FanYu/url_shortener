@@ -9,4 +9,8 @@ class ShortUrlMapping
   field :short_url, type: String
   field :original_url, type: String
 
+  validates :key, presence: true
+  validates :short_url, presence: true
+  validates :original_url, presence: true
+
 end
