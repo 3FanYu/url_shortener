@@ -7,6 +7,10 @@ gem 'mongoid'
 
 gem 'base62-rb'
 
+gem 'grape-entity'
+
+gem 'figaro'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 
