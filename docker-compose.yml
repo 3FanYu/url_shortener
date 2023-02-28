@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/url_shortener
+    command: bash -c "rm -f tmp/pids/server.pid || true && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    image: mongo:4.4.3
+    restart: always
+    ports:
+      - 27017:27017
+
+volumes:
+  bundle:
