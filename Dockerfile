@@ -4,9 +4,9 @@ RUN mkdir /url_shortener
 
 WORKDIR /url_shortener
 
-ADD ./Gemfile /url_shortener/Gemfile
+ADD url_shortener/Gemfile /url_shortener/Gemfile
 
-ADD ./Gemfile.lock /url_shortener/Gemfile.lock
+ADD url_shortener/Gemfile.lock /url_shortener/Gemfile.lock
 
 RUN gem update --system
 
