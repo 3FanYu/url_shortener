@@ -25,6 +25,6 @@ class CreateShortUrlMappingService
   end
 
   def render_result
-    ::ShortUrlMappingEntity.represent(@short_url_mapping).to_json
+    ::ShortUrlMappingEntity.represent(@short_url_mapping)
   end
 end
