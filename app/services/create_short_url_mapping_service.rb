@@ -7,8 +7,9 @@ class CreateShortUrlMappingService
 
   def run
     fetch_mapping
-    return @short_url_mapping unless @short_url_mapping.blank?
+    return render_result unless @short_url_mapping.blank?
     create_mapping
+    render_result
   end
 
   private
@@ -20,6 +21,10 @@ class CreateShortUrlMappingService
   def create_mapping
     unique_key = generate_unique_key
     short_url = generate_short_url(key: unique_key)
-    ::ShortUrlMapping.create(key: unique_key, short_url: short_url, original_url: @url)
+    @short_url_mapping = ::ShortUrlMapping.create(key: unique_key, short_url: short_url, original_url: @url)
+  end
+
+  def render_result
+    ::ShortUrlMappingEntity.represent(@short_url_mapping).to_json
   end
 end
