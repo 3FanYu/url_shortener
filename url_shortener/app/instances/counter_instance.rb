@@ -1,4 +1,4 @@
-class CounterService
+class CounterInstance
   include Singleton
   MAX_NUMBER = 10000
 

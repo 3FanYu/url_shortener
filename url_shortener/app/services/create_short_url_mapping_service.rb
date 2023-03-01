@@ -20,7 +20,7 @@ class CreateShortUrlMappingService
   end
 
   def fetch_counter
-    @counter = ::CounterService.instance.get_next_count
+    @counter = ::CounterInstance.instance.get_next_count
   end
 
   def create_mapping
