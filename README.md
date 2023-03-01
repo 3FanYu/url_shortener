@@ -1,4 +1,5 @@
-Setting up the project
+<h1>Setting up the project</h1>
+
 1. Make sure you've installed docker and docker-compose
 2. Make sure you're in the root directory of the project
 3. Run `make up` to start services
