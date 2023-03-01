@@ -30,7 +30,7 @@ curl --location --request POST 'localhost:3000/short_urls' \
 
 
 # Implementation 
-## Only 90% complete, haven't implement cache yet.
+***Only 90% complete, haven't implement cache yet.**
 ## Shortening url:
 - [x] Check if received url exists in DB, return directly if true.
 - [x] Generate an unique ID using timestamp concat with a counter
