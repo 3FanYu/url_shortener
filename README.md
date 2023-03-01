@@ -29,7 +29,8 @@ curl --location --request POST 'localhost:3000/short_urls' \
     - Return 404 if no record found or record expired
 
 
-# Implementation (90% complete)
+# Implementation 
+## Only 90% complete, haven't implement cache yet.
 ## Shortening url:
 - [x] Check if received url exists in DB, return directly if true.
 - [x] Generate an unique ID using timestamp concat with a counter
