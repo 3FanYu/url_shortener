@@ -6,7 +6,7 @@ module ShortUrlHelper
   # which will be encoded with base62 and become a string with length of 8
   def generate_unique_key(counter:)
     timestamp = (Time.now.to_f * 1000).to_i
-    (timestamp - KEY_SALT) * CounterService::MAX_NUMBER + counter
+    (timestamp - KEY_SALT) * CounterInstance::MAX_NUMBER + counter
   end
 
   def generate_short_url(key:)
