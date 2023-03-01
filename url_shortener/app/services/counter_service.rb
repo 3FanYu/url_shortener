@@ -7,11 +7,16 @@ class CounterService
   end
 
   def get_next_count
-    mutex = Mutex.new
-    mutex.synchronize do
+    lock.synchronize do
       @counter += 1
       (@counter % MAX_NUMBER).to_i
     end
+  end
+
+  private
+
+  def lock
+    @lock ||= Mutex.new
   end
 
 end
